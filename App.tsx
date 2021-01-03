@@ -1,7 +1,6 @@
 import { StatusBar } from "expo-status-bar";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-import axios from "axios";
 import { ShowNews } from "./modules/ShowNews";
 
 export default function App() {
