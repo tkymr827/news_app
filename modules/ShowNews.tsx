@@ -26,9 +26,10 @@ export const ShowNews: React.FC = () => {
     });
 
     return (
-        <View>
+        <View style={styles.container}>
             {news.map((data: { [key: string]: string }, index: number) => {
                 return (
+                    // わざわざ別コンポーネントに渡さなくてもここで表示させればよかったのでは
                     <Block
                         key={index}
                         author={data.author}
@@ -38,10 +39,16 @@ export const ShowNews: React.FC = () => {
                         source={data.source}
                         title={data.title}
                         url={data.url}
-                        image={data.image}
+                        image={data.urlToImage}
                     />
                 );
             })}
         </View>
     );
 };
+
+const styles = StyleSheet.create({
+    container: {
+        width: "90%",
+    },
+});

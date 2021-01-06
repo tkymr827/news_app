@@ -6,7 +6,6 @@ import { ShowNews } from "./modules/ShowNews";
 export default function App() {
     return (
         <View style={styles.container}>
-            <Text>Open up App.tsx to start workinaag on your app!</Text>
             {/* {news.length ? <ShowNews news={news} /> : <Text>Loading</Text>} */}
             <ShowNews />
             <StatusBar style="auto" />
